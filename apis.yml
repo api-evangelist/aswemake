@@ -1,23 +1,62 @@
 aid: aswemake
+
 name: Aswemake
-description: 'Aswemake is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://framerusercontent.com/assets/6UK8Gu1q3JVaGIaK2mFlRkIREk.webp
+
+description: 'Aswemake Inc. operates a digital platform for food and beverage retail, unifying offline grocery information into an online service that reduces costs for consumers and enhances competitiveness for merchants. The company offers a marketplace where customers can purchase food items at low prices, leveraging technology to streamline logistics and provide a seamless shopping experience across South Korea.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aswemake/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- FoodTech
+- Marketplace
+- SouthKorea
+- Retail
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aswemake-hosts.yml
+- type: Leadership
+  url: https://www.aswemake.com/team
+- type: DomainSecurity
+  url: security/aswemake-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aswemake
+  url: https://www.aswemake.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: "The provider's website https://www.aswemake.com returns HTML with no accessible API documentation or machine‑readable spec."
+  evidence:
+    - url: https://www.aswemake.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
